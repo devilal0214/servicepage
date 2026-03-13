@@ -1,4 +1,4 @@
-# React + Vite + Tailwind CSS Starter Template
+# React + Vite + Tailwind CSS Service page
 Services Page  built with React, Vite, and Tailwind CSS.
 
 **Prerequisites:**  Node.js
