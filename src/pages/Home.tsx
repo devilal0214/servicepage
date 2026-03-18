@@ -20,11 +20,11 @@ export default function Home() {
         <Philosophy />
         <Services />
         <Process />
-       {/* <SelectedWork />
-        <IdealClients />
-        <Contact /> */}
+     <SelectedWork />
+          <IdealClients />
+        <Contact />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
