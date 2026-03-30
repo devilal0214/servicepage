@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -33,10 +34,10 @@ export default function Hero() {
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
               className="text-5xl sm:text-6xl lg:text-7xl font-display font-medium text-gray-900 tracking-tight mb-8 leading-[1.1]"
             >
-              Clarity before <br />
+              Clarity Before <br />
               communication.
             </motion.h1>
             
@@ -57,15 +58,17 @@ export default function Hero() {
             >
               <a 
                 href="#contact" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-brand-orange text-white text-base font-medium rounded-lg hover:bg-orange-600 transition-all duration-300 hover:scale-[1.02] shadow-sm hover:shadow-md"
+                className="btn-primary group"
               >
                 Start a conversation
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a 
                 href="#work" 
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-brand-orange text-brand-orange text-base font-medium rounded-lg hover:bg-orange-50 transition-all duration-300"
+                className="btn-outlined group"
               >
                 View selected work
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </motion.div>
           </div>
@@ -76,7 +79,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
             className="hidden lg:block relative"
           >
-             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
                 <img 
                   src="https://picsum.photos/seed/architecture/800/1000?grayscale" 
                   alt="Abstract architectural form representing clarity" 

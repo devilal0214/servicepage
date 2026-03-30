@@ -15,12 +15,12 @@ export default function Home() {
       <div className="bg-noise" />
       <Navbar />
       <main className="relative z-10">
-        <Hero />
+        {/* <Hero />
         <Marquee />
-        <Philosophy />
+        <Philosophy /> */}
         <Services />
         <Process />
-     <SelectedWork />
+     {/* <SelectedWork /> */}
           <IdealClients />
         <Contact />
       </main>

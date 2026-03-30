@@ -42,6 +42,14 @@ const serviceCategories = [
       {
         question: "What is the difference between a brand refresh and a rebrand?",
         answer: "A refresh updates your visual look while keeping your core positioning intact. A rebrand involves a fundamental shift in strategy, positioning, and often naming, followed by a new visual identity."
+      },
+      {
+        question: "How do you ensure the brand aligns with our business goals?",
+        answer: "Every project begins with a deep-dive discovery phase where we analyze your business objectives, target audience, and competitive landscape to ensure our strategic recommendations directly support your growth."
+      },
+      {
+        question: "Will we receive brand guidelines at the end of the project?",
+        answer: "Yes, every comprehensive branding project concludes with the delivery of a detailed brand guidelines document, ensuring your team knows exactly how to apply the new identity consistently."
       }
     ]
   },
@@ -75,6 +83,14 @@ const serviceCategories = [
       {
         question: "Do you handle printing for packaging and collateral?",
         answer: "We handle the entire design and production file preparation process. We can recommend trusted print partners and coordinate with them to ensure the final output matches our design intent."
+      },
+      {
+        question: "What file formats will we receive upon completion?",
+        answer: "We provide all necessary formats for both print and digital use, including vector files (AI, EPS, SVG) for infinite scalability and raster files (PNG, JPG, PDF) for immediate application."
+      },
+      {
+        question: "How many rounds of revisions are included?",
+        answer: "Our standard design process includes up to three rounds of revisions at key milestones. This structured approach ensures we refine the work collaboratively while keeping the project on schedule."
       }
     ]
   },
@@ -112,6 +128,14 @@ const serviceCategories = [
       {
         question: "Do you write the content for the website?",
         answer: "We can. Our Content & Storytelling service can be integrated into the web project to ensure your copy is as compelling as the design."
+      },
+      {
+        question: "Are your websites optimized for mobile devices?",
+        answer: "Absolutely. Every website we build follows a mobile-first approach, ensuring a seamless, fast, and intuitive user experience across all devices and screen sizes."
+      },
+      {
+        question: "Do you provide ongoing website maintenance?",
+        answer: "Yes, we offer dedicated maintenance packages that cover security updates, performance monitoring, regular backups, and technical support to keep your site running smoothly."
       }
     ]
   },
@@ -161,6 +185,10 @@ const serviceCategories = [
       {
         question: "Do you offer monthly marketing retainers?",
         answer: "Yes. We offer flexible retainer packages that allow us to act as your extended marketing team, handling everything from strategy to execution on an ongoing basis."
+      },
+      {
+        question: "How do you measure the success of a marketing campaign?",
+        answer: "We define clear Key Performance Indicators (KPIs) upfront—such as lead volume, conversion rates, and cost-per-acquisition—and provide transparent, regular reporting on these metrics."
       }
     ]
   },
@@ -190,6 +218,14 @@ const serviceCategories = [
       {
         question: "Do you create the ad creatives?",
         answer: "Yes. Our design and copy teams produce high-converting assets (images, videos, copy) tailored to each platform and audience segment."
+      },
+      {
+        question: "How do you determine which platforms to advertise on?",
+        answer: "We analyze your target audience demographics, behavior, and campaign objectives to recommend the most effective mix, whether that's intent-driven Google Ads or discovery-focused Meta Ads."
+      },
+      {
+        question: "Do you perform A/B testing on your campaigns?",
+        answer: "Continuous A/B testing is core to our methodology. We rigorously test different headlines, visuals, and targeting parameters to optimize performance and maximize your return on ad spend."
       }
     ]
   },
@@ -223,6 +259,14 @@ const serviceCategories = [
       {
         question: "Can you create animated explainer videos?",
         answer: "Yes. We specialize in 2D motion graphics and animation to simplify complex ideas and make them engaging."
+      },
+      {
+        question: "How long does it take to produce a corporate film?",
+        answer: "A standard corporate film usually takes 4-8 weeks from initial concept to final delivery, depending on the complexity of the shoot, locations, and post-production requirements."
+      },
+      {
+        question: "Do you provide actors or voiceover talent?",
+        answer: "Yes, we manage the entire casting process. We have a network of professional actors and voiceover artists and will provide you with options that best fit your brand's tone."
       }
     ]
   },
@@ -268,6 +312,14 @@ const serviceCategories = [
       {
         question: "Do you have experience in my specific niche?",
         answer: "Our fundamental principles of clarity and strategy apply across industries, but we have deep specific experience in the sectors listed here, allowing us to hit the ground running."
+      },
+      {
+        question: "How does your approach differ for B2B versus B2C?",
+        answer: "While the core principles of good branding remain the same, our B2B work often focuses more heavily on logic, trust, and long-term value, whereas our B2C work may lean more into emotion, lifestyle, and immediate desire."
+      },
+      {
+        question: "Can you help a legacy company modernize its brand?",
+        answer: "Absolutely. We specialize in helping established organizations refresh their positioning and visual identity to appeal to modern audiences without alienating their existing customer base."
       }
     ]
   }
@@ -312,7 +364,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-white border-b border-gray-100">
+    <section id="services" className="py-44 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-24 max-w-3xl">
           <h2 className="text-sm font-semibold text-gray-400 tracking-widest uppercase mb-4">Our Expertise</h2>
@@ -338,7 +390,7 @@ export default function Services() {
                 <div className="h-px w-12 bg-gray-200 mt-8 mb-8"></div>
                 <a 
                   href="#contact"
-                  className="inline-flex items-center px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-brand-orange transition-colors duration-300 group"
+                  className="btn-primary text-sm px-6 py-3 group"
                 >
                   Start a project
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />

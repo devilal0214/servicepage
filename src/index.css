@@ -1,19 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  /* --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; */
   --color-brand-orange: #FF6B00;
   --color-brand-yellow: #FFC107;
   --color-brand-purple: #6B46C1;
+  --color-brand-green: #00A651;
 }
 
 body {
   font-family: var(--font-sans);
   background-color: #ffffff;
   color: #0f172a;
+}
+
+* {
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 0 transparent) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-8 py-3 text-[#29256a] font-semibold font-sans transition-all duration-300 bg-transparent outline-none;
+    border: 1.5px solid #29256a;
+    border-radius: 50px;
+    z-index: 1;
+    box-shadow: none !important;
+  }
+  
+  .btn-outlined {
+    @apply relative inline-flex items-center justify-center px-8 py-3 text-[#29256a] font-semibold font-sans capitalize transition-all duration-300 bg-transparent outline-none;
+    border: 1.5px solid #29256a;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: none !important;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #29256a 0%, #09994d 33%, #fbba16 66%, #ee4038 100%);
+    background-size: 200% 200%;
+    z-index: -1;
+    transition: opacity 300ms ease-in-out;
+    opacity: 0;
+    border-radius: inherit;
+  }
+
+  .btn-outlined::before {
+    content: '';
+    position: absolute;
+    inset: -1.5px;
+    background: linear-gradient(135deg, #29256a 0%, #09994d 33%, #fbba16 66%, #ee4038 100%);
+    background-size: 200% 200%;
+    z-index: -1;
+    transition: opacity 300ms ease-in-out;
+    opacity: 0;
+    border-radius: inherit;
+  }
+
+  .btn-primary:hover::before,
+  .btn-outlined:hover::before {
+    opacity: 1;
+    animation: gradient-move 3s ease infinite alternate;
+  }
+
+  .btn-primary:hover {
+    color: white;
+    border-color: transparent;
+    box-shadow: none !important;
+  }
+
+  .btn-outlined:hover {
+    color: white;
+    border-color: transparent;
+    box-shadow: none !important;
+  }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 .bg-noise {
